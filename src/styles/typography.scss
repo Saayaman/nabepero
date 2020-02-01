@@ -1,0 +1,109 @@
+@import './colors';
+
+@import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Inconsolata");
+// @font-face {
+//   font-family: "GTEstiProText";
+//   src: url("../resources/fonts/GT-Eesti-Pro-Text-Regular.woff") format("woff");
+// }
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+h1 {
+  font-family: GTEstiProText;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 4.8rem !important;
+  line-height: 56px;
+  margin: 0 0 24px;
+}
+
+h2 {
+  font-family: GTEstiProText;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 3.6rem !important;
+  line-height: 42px;
+  margin: 48px 0 24px;
+}
+h3 {
+  font-family: GTEstiProText;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 2.4rem !important;
+  line-height: 28px;
+  margin: 48px 0 24px;
+}
+h4{
+  font-family: GTEstiProText;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 2rem !important;
+  line-height: 23px;
+  margin: 0 0 24px;
+}
+
+p {
+  font-family: "Roboto", sans-serif;
+  font-weight: normal;
+  font-size: 2rem !important;
+  line-height: 30px;
+  letter-spacing: 0.5px;
+}
+
+.time-text, time {
+  font-family: "Roboto", sans-serif;
+  font-weight: 600;
+  font-size: 1.4rem !important;
+  color: $gray-500;
+}
+
+.bold-500 {
+  font-weight: 500;
+}
+
+ul {
+  font-family: "Roboto", sans-serif;
+
+  font-style: normal;
+  font-weight: 500;
+  font-size: 2rem !important;
+  line-height: 30px;
+}
+
+ol {
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 2rem !important;
+  line-height: 30px;
+  letter-spacing: 0.5px;
+}
+
+a {
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1.6rem !important;
+  line-height: 30px;
+  font-weight: 600;
+  text-decoration-line: underline;
+}
+
+blockquote {
+  color: $gray-900;
+  font-style: italic;
+  border-left: 4px solid $gray-900;
+  padding-left: 16px;
+  margin-top: 24px;
+  margin-bottom: 24px;
+  line-height: 30px;
+}
+
+small {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: $green-400;
+}
