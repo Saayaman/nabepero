@@ -1,23 +1,30 @@
 import React from "react";
 import { ReactComponent as Logo } from "assets/images/Logo.svg";
-const Nav = () => {
+import { StyledNav, StyleNaveA } from "./StyledComponents";
+export const Nav = () => {
   return (
-    <nav>
-      <div className="container navbar">
-        <Logo />
-        <ul>
-          <li>サービス内容</li>
-          <li>取扱法人</li>
-          <li>弁護士について</li>
-          <li>利用者の声</li>
-          <li>会社概要</li>
-          <li>
-            <button className="round-orange">お問い合わせ</button>
-          </li>
-        </ul>
-      </div>
-    </nav>
+    <StyledNav>
+      <Logo />
+      <ul>
+        <StyleNaveA myColor="green">
+          <a href="">サービス内容</a>
+        </StyleNaveA>
+        <StyleNaveA>
+          <a href="">取扱法人</a>
+        </StyleNaveA>
+        <StyleNaveA>
+          <a href="">弁護士について</a>
+        </StyleNaveA>
+        <StyleNaveA>
+          <a href="">利用者の声</a>
+        </StyleNaveA>
+        <StyleNaveA>
+          <a href="">会社概要</a>
+        </StyleNaveA>
+        <StyleNaveA>
+          <button>お問い合わせ</button>
+        </StyleNaveA>
+      </ul>
+    </StyledNav>
   );
 };
-
-export { Nav };
