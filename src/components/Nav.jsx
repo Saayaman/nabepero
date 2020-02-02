@@ -1,10 +1,9 @@
 import React from "react";
-import { ReactComponent as Logo } from "assets/images/Logo.svg";
-import { StyledNav, StyleNaveA } from "./StyledComponents";
+import { StyledNav, StyleNaveA, StyledLogo } from "./StyledComponents";
 export const Nav = () => {
   return (
     <StyledNav>
-      <Logo />
+      <StyledLogo />
       <ul>
         <StyleNaveA myColor="green">
           <a href="">サービス内容</a>
