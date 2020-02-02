@@ -53,9 +53,12 @@ nav {
 }
 
 button.round-orange {
+  // all: unset;
+  border-color: transparent;
   padding: 14px 24px;
   border-radius: 50px;
   background: $orange;
+  outline: none;
 }
 .hero-left {
   flex: 1;
@@ -64,4 +67,60 @@ button.round-orange {
 .hero-right {
   flex: 1;
   padding: 0px 160px 0 160px;
+}
+
+footer {
+  background-color: $gray-900;
+  height: 100px;
+}
+.footer-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  ul {
+    display: flex;
+    padding: 0px;
+    list-style-type: none;
+    li {
+      padding: 0px 20px 0 0;
+      a {
+        color: $dark-blue;
+        text-decoration: none;
+        font-style: normal;
+        font-weight: bold;
+      }
+    }
+  }
+  p {
+    color: white;
+    font-weight: normal;
+    font-size: 16px;
+  }
+}
+.small-container {
+  margin: 0 auto;
+  max-width: 896px;
+}
+.quotes {
+  background-color: $gray-500;
+  height: 51px;
+  margin: 103px auto 32px auto;
+  display: flex;
+  align-items: center;
+  border-left-width: 8px;
+  border-left-style: solid;
+  padding-left: 31px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 28px;
+  text-align: center;
+
+  &.orange {
+    border-left-color: $orange;
+    color: $orange;
+  }
+  &.blue {
+  }
 }

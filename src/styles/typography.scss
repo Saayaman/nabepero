@@ -1,4 +1,4 @@
-@import './colors';
+@import "./colors";
 
 @import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Inconsolata");
@@ -36,7 +36,7 @@ h3 {
   line-height: 28px;
   margin: 48px 0 24px;
 }
-h4{
+h4 {
   font-family: GTEstiProText;
   font-style: normal;
   font-weight: 500;
@@ -53,7 +53,8 @@ p {
   letter-spacing: 0.5px;
 }
 
-.time-text, time {
+.time-text,
+time {
   font-family: "Roboto", sans-serif;
   font-weight: 600;
   font-size: 1.4rem !important;
@@ -66,7 +67,6 @@ p {
 
 ul {
   font-family: "Roboto", sans-serif;
-
   font-style: normal;
   font-weight: 500;
   font-size: 2rem !important;
@@ -86,7 +86,7 @@ a {
   font-family: "Roboto", sans-serif;
   font-style: normal;
   font-weight: normal;
-  font-size: 1.6rem !important;
+  font-size: 2rem;
   line-height: 30px;
   font-weight: 600;
   text-decoration-line: underline;

@@ -1,5 +1,7 @@
 import React from "react";
-import { Header, Nav } from "components";
+import { Header, Nav, Footer, Quote } from "components";
+import { ReactComponent as Payment } from "assets/images/clip-payment.svg";
+import { ReactComponent as Waiting } from "assets/images/clip-waiting.svg";
 function App() {
   return (
     <div className="App">
@@ -24,6 +26,26 @@ function App() {
         </p>
         <h1 style={{ textAlign: "center" }}>nabeperoの強み</h1>
       </div>
+      <div className="container">
+        <div>
+          <Payment />
+          <h2>スピーディーな対応</h2>
+          <p>
+            主要な海外法人の登記簿であれば、 在庫を保有してます。
+            迅速なお届けが可能です！
+          </p>
+        </div>
+        <div>
+          <Waiting />
+          <h2>安価で確実にお届け</h2>
+          <p>
+            海外法人の登記簿をどこよりも 安く取得いたします。 他社の10%
+            off価格で提供中！
+          </p>
+        </div>
+      </div>
+      <Quote className="orange" text={"なぜこれが可能か"} />
+      <Footer />
     </div>
   );
 }
