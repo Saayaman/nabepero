@@ -1,5 +1,5 @@
 export { About } from "./about";
-export { Header } from "./header";
+export { Header } from "./Header";
 export { Footer } from "./footer";
 export { TopBody } from "./topbody";
 export { MainBody } from "./mainbody";
