@@ -1,4 +1,6 @@
-export { Header } from "./Header";
-export { Nav } from "./Nav";
+export { About } from "./about";
+export { Header } from "./header";
 export { Footer } from "./footer";
-export { Quote } from "./quote";
+export { TopBody } from "./topbody";
+export { MainBody } from "./mainbody";
+export { ContactForm } from "./contactform";

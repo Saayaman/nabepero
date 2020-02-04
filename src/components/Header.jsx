@@ -1,22 +1,19 @@
 import React from "react";
-import { ReactComponent as Budge } from "assets/images/budge.svg";
-
-const Header = () => {
+import { ReactComponent as Logo } from "assets/images/Logo.svg";
+export const Header = () => {
   return (
-    <header>
-      <div className="hero-left">
-        <h1>海外登記簿の取得、お困りですか？</h1>
-        <p>
-          Twitter、Google、２ちゃんねる、５ちゃんねる等。
-          海外法人との裁判に必要な資格証明書の取得を代行いたします
-        </p>
-        <button>無料相談する</button>
-      </div>
-      <div className="hero-right">
-        <Budge />
-      </div>
-    </header>
+    <nav className="container navbar">
+      <Logo className="logo" />
+      <ul>
+        <li>サービス内容</li>
+        <li>取扱法人</li>
+        <li>弁護士について</li>
+        <li>利用者の声</li>
+        <li>会社概要</li>
+        <li>
+          <button className="round-orange">お問い合わせ</button>
+        </li>
+      </ul>
+    </nav>
   );
 };
-
-export { Header };
