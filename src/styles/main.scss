@@ -15,59 +15,267 @@ body {
   margin: 0px;
   padding: 0;
 }
-header {
-  display: flex;
-  height: 591px;
-  justify-content: space-around;
-  background-image: url("../assets/images/hero-image.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  align-items: center;
-  background-color: red;
-}
+
 .container {
   max-width: 1440px;
   margin: 0 auto;
 }
 
-nav {
-  height: 87px;
-  background-color: white;
+// styled by m
+.navbar {
   width: 100%;
+  display: flex;
   position: fixed;
-  .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
+  flex-wrap: wrap;
+  align-items: center;
+  background-color: #ffffff;
+  justify-content: space-around;
+
   ul {
     display: flex;
-    list-style-type: none;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+
     li {
       padding: 0 17px;
-      font-size: 18px;
-      align-items: center;
-      display: flex;
+      cursor: pointer;
+      list-style-type: none;
+
+      button {
+        outline: none;
+        cursor: pointer;
+        padding: 10px 34px;
+        border-radius: 50px;
+        background: $orange;
+        border-color: transparent;
+      }
+    }
+
+    li:nth-child(1) {
+      color: $orange;
     }
   }
 }
 
-button.round-orange {
-  // all: unset;
-  border-color: transparent;
-  padding: 14px 24px;
-  border-radius: 50px;
-  background: $orange;
-  outline: none;
+.topbody {
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: rgba(#0082e0, 0.5);
+  background-image: url("../assets/images/hero-image.jpg");
+  background-blend-mode: saturation;
+  div {
+    height: 591px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    .hero-left {
+      margin: 15px;
+      display: flex;
+      flex-basis: 40%;
+      color: #ffffff;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+
+      h1 {
+        font-weight: bold;
+      }
+
+      button {
+        width: 200px;
+        height: 45px;
+        outline: none;
+        color: #ffffff;
+        border-radius: 20px;
+        border-color: transparent;
+        background-color: $orange;
+      }
+    }
+
+    .hero-right {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      justify-content: space-around;
+    }
+  }
 }
-.hero-left {
-  flex: 1;
-  padding: 0px 0px 0 160px;
+
+.about {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url("../assets/images/about.png");
+
+  p {
+    width: 898px;
+    color: #267ebe;
+    margin: 100px auto 100px auto;
+  }
 }
-.hero-right {
-  flex: 1;
-  padding: 0px 160px 0 160px;
+
+.mainbody {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  .twocard {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+
+    div {
+      display: flex;
+      max-width: 400px;
+      max-height: 500px;
+      align-self: center;
+      align-items: center;
+      flex-direction: column;
+      justify-content: center;
+
+      p {
+        color: #2d8fd7;
+        text-align: center;
+        font-size: 16px !important;
+      }
+
+      .cardtitle {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        h1 {
+          margin-bottom: 10px;
+          color: #2d8fd7;
+          margin-right: 10px;
+        }
+      }
+    }
+  }
+
+  .orangequote {
+    width: 100%;
+  }
+
+  .arrows {
+    display: flex;
+    margin-left: 20px;
+    flex-direction: column;
+
+    div {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      .orange {
+        color: $orange;
+      }
+    }
+  }
+
+  .images {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    img {
+      margin: 12px;
+      width: 270px;
+      height: 270px;
+    }
+  }
 }
+
+.contactform {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  display: flex;
+  flex-flow: column wrap;
+
+  .title {
+    color: #2d8fd7;
+    align-self: center;
+    font-family: Roboto;
+    font-weight: bold;
+  }
+
+  .description {
+    display: flex;
+    align-self: center;
+    flex-flow: row wrap;
+    :nth-child(2) {
+      color: $orange;
+      text-decoration: underline;
+    }
+  }
+
+  .mainform {
+    max-width: 897px;
+    padding: 50px;
+    margin: 50px;
+    display: flex;
+    align-self: center;
+    flex-flow: column wrap;
+    border: lightgray solid 1px;
+
+    .input {
+      margin: 10px;
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: space-between;
+
+      .label {
+        width: 180px;
+      }
+
+      input {
+        height: 30px;
+        display: flex;
+        flex-grow: 1;
+        min-width: 250px;
+        margin: 0 10px 0 10px;
+        padding: 5px;
+      }
+
+      textarea {
+        height: 140px;
+        display: flex;
+        flex-grow: 1;
+        min-width: 250px;
+        margin: 0 10px 0 10px;
+        padding: 10px;
+      }
+
+      button {
+        display: flex;
+        align-self: flex-start;
+        width: 180px;
+        height: 30px;
+        text-align: center;
+        border-radius: 20px;
+        background-color: $orange;
+      }
+    }
+
+    .button {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+    }
+  }
+}
+
+// styled by m
 
 footer {
   background-color: $gray-900;
@@ -97,18 +305,16 @@ footer {
     font-size: 16px;
   }
 }
+
 .small-container {
   margin: 0 auto;
   max-width: 896px;
 }
+
 .quotes {
-  background-color: $gray-500;
   height: 51px;
-  margin: 103px auto 32px auto;
   display: flex;
   align-items: center;
-  border-left-width: 8px;
-  border-left-style: solid;
   padding-left: 31px;
   font-family: Roboto;
   font-style: normal;
@@ -116,11 +322,16 @@ footer {
   font-size: 24px;
   line-height: 28px;
   text-align: center;
-
+  border-left-width: 8px;
+  border-left-style: solid;
+  background-color: $gray-500;
+  margin: 103px auto 32px auto;
   &.orange {
     border-left-color: $orange;
     color: $orange;
   }
   &.blue {
+    border-left-color: #2d8fd7;
+    color: #2d8fd7;
   }
 }
