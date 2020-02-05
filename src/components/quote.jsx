@@ -1,7 +1,9 @@
 import React from "react";
 
 const Quote = ({ className, text }) => (
-  <div className={`small-container quotes ${className}`}>{text}</div>
+  <div className={`quotes ${className}`}>
+    <p>{text}</p>
+  </div>
 );
 
 export { Quote };
