@@ -21,6 +21,8 @@ export const Slider = () => {
           <div className="card"></div>
         </AliceCarousel>
       </div>
+
+      <button>今すぐ無料相談！</button>
     </div>
   );
 };
