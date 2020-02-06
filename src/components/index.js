@@ -1,6 +1,10 @@
 export { About } from "./about";
-export { Header } from "./Header";
+export { Header } from "./header";
 export { Footer } from "./footer";
+export { Slider } from "./slider";
+export { Summary } from "./summary";
 export { TopBody } from "./topbody";
 export { MainBody } from "./mainbody";
+export { Companies } from "./companies";
+export { BioGraphi } from "./biographi";
 export { ContactForm } from "./contactform";
