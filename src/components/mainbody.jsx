@@ -5,7 +5,7 @@ import { ReactComponent as Payment } from "../assets/images/clip-payment.svg";
 import { ReactComponent as Waiting } from "../assets/images/clip-waiting.svg";
 
 export const MainBody = props => (
-  <div className="mainbody">
+  <div id="mainBody" className="mainbody">
     <div className="container">
       <h3 className="mainbody__title">nabeperoの強み</h3>
 

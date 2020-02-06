@@ -3,7 +3,7 @@ import { ReactComponent as Budge } from "assets/images/budge.svg";
 
 export const About = () => {
   return (
-    <section className="about ">
+    <section id="about" className="about ">
       <div className="container">
         <div className="about-bg"></div>
         <p>

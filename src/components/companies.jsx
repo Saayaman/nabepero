@@ -6,7 +6,7 @@ import { ReactComponent as Philippines } from "assets/images/philippines.svg";
 
 export const Companies = () => {
   return (
-    <div className="companies">
+    <div id="companies" className="companies">
       <div className="col column1">
         <Flag />
         <p>カリフォルニア州</p>

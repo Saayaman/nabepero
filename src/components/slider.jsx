@@ -9,7 +9,7 @@ const responsive = {
 
 export const Slider = () => {
   return (
-    <div className="sliderarea">
+    <div id="testimonial" className="sliderarea">
       <h3>お客様の声</h3>
       <p>たくさんの方々に反響を頂いております。</p>
 

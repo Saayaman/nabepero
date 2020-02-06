@@ -3,7 +3,7 @@ export { Header } from "./header";
 export { Footer } from "./footer";
 export { Slider } from "./slider";
 export { Summary } from "./summary";
-export { TopBody } from "./topbody";
+export { TopBody } from "./topBody";
 export { MainBody } from "./mainbody";
 export { Companies } from "./companies";
 export { BioGraphi } from "./biographi";

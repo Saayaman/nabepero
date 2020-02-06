@@ -22,9 +22,13 @@ body {
 }
 nav {
   width: 100%;
+  position: fixed;
+  background: white;
+  z-index: 100;
 }
 .slide-bar {
   height: 100vh;
+  z-index: 101;
   position: fixed;
   top: 0;
   right: 0;
@@ -32,6 +36,14 @@ nav {
   background-color: white;
   transition: all 1s ease-in-out;
   opacity: 0;
+  .hideMenu {
+    opacity: 0;
+    transition: all ease 10ms;
+  }
+  .showMenu {
+    opacity: 1;
+    transition: all ease 10ms;
+  }
   &.hide {
     width: 0px;
     opacity: 0;
@@ -40,9 +52,11 @@ nav {
     opacity: 1;
     width: 400px;
   }
+
   .close-icon {
     font-size: 25px;
     margin: 25px;
+    color: black;
   }
   ul {
     list-style-type: none;
@@ -69,8 +83,12 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  height: 95px;
 
   @include below-desktop() {
+    padding: 0 20px;
+  }
+  @include desktop-wide() {
     padding: 0 20px;
   }
 

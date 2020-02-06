@@ -3,7 +3,7 @@ import { ReactComponent as Budge } from "assets/images/budge.svg";
 
 export const TopBody = () => {
   return (
-    <section className="topbody">
+    <section id="header" className="topbody">
       <div className="container">
         <div className="hero-left">
           <h1>海外登記簿の取得、お困りですか？</h1>
