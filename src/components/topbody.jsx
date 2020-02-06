@@ -6,9 +6,9 @@ import Container from "./container";
 export const TopBody = () => {
   return (
     <section id="header" className="topbody">
-      <div className="container">
-        <div className="hero-left">
-          <h1>海外登記簿の取得、<br />お困りですか？</h1>
+
+        <div className="container">
+        <Container>
 
           <div className="hero-left">
             <h1>海外登記簿の取得、<br />お困りですか？</h1>
@@ -27,6 +27,7 @@ export const TopBody = () => {
           </Container>
 
         </div>
+
     </section>
   );
 };
