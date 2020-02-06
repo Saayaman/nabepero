@@ -119,8 +119,7 @@ nav {
         box-shadow: none;
       }
     }
-
-    li:nth-child(1) {
+    .active {
       color: $orange;
     }
   }

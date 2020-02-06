@@ -1,31 +1,74 @@
 import React, { useState } from "react";
 import { ReactComponent as Logo } from "assets/images/Logo.svg";
 import { MdMenu, MdClose } from "react-icons/md";
-import { useMediaQuery } from "beautiful-react-hooks";
+import {
+  useMediaQuery,
+  useWindowScroll,
+  useThrottledFn
+} from "beautiful-react-hooks";
 export const Header = () => {
   const isSmall = useMediaQuery("(max-width: 1247px)");
   const [showSidebar, setShowSidebar] = useState(false);
   const [showMenu, setShowMenu] = useState(false);
+  const [scrollY, setScrollY] = useState(window.scrollY);
+
+  useWindowScroll(
+    useThrottledFn(event => {
+      setScrollY(window.scrollY);
+    })
+  );
   const scrollTo = (id, condition) => {
     const element = document.getElementById(id);
     window.scrollTo({
       top: element.offsetTop - 150,
       behavior: "smooth"
     });
-    condition && setShowMenu(false);
+    if (condition) {
+      setShowSidebar(false);
+      setShowMenu(false);
+    }
   };
+  console.log(scrollY);
   return (
     <>
       <nav>
         <div className="navbar container">
           <Logo className="logo" />
           <ul className="top-nav">
-            <li onClick={() => scrollTo("header")}>サービス内容</li>
-            <li onClick={() => scrollTo("about")}>取扱法人</li>
-            <li onClick={() => scrollTo("mainBody")}>弁護士について</li>
-            <li onClick={() => scrollTo("companies")}>利用者の声</li>
-            <li onClick={() => scrollTo("bio")}>会社概要</li>
-            <li onClick={() => scrollTo("testimonial")}>
+            <li
+              className={`${scrollY < 710 && scrollY > 0 ? "active" : ""}`}
+              onClick={() => scrollTo("header")}
+            >
+              サービス内容
+            </li>
+            <li
+              className={`${scrollY < 2300 && scrollY > 710 ? "active" : ""}`}
+              onClick={() => scrollTo("about")}
+            >
+              取扱法人
+            </li>
+            <li
+              className={`${scrollY < 2800 && scrollY > 2300 ? "active" : ""}`}
+              onClick={() => scrollTo("mainBody")}
+            >
+              弁護士について
+            </li>
+            <li
+              className={`${scrollY < 3700 && scrollY > 2800 ? "active" : ""}`}
+              onClick={() => scrollTo("companies")}
+            >
+              利用者の声
+            </li>
+            <li
+              className={`${scrollY < 4300 && scrollY > 3700 ? "active" : ""}`}
+              onClick={() => scrollTo("bio")}
+            >
+              会社概要
+            </li>
+            <li
+              className={`${scrollY < 4900 && scrollY > 4000 ? "active" : ""}`}
+              onClick={() => scrollTo("testimonial")}
+            >
               <button
                 onClick={() => scrollTo("contacts")}
                 className="round-orange"
