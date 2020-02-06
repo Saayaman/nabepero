@@ -4,8 +4,10 @@ import {
   Header,
   Footer,
   About,
+  Slider,
   MainBody,
   Companies,
+  BioGraphi,
   ContactForm
 } from "components";
 
@@ -17,6 +19,8 @@ function App() {
       <About />
       <MainBody />
       <Companies />
+      <BioGraphi />
+      <Slider />
       <ContactForm />
       <Footer />
     </div>

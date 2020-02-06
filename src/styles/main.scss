@@ -506,6 +506,24 @@ nav {
   }
 }
 
+.sliderarea {
+  margin: 0px;
+  padding: 0px;
+  width: 100%;
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+
+  .slider {
+    width: 600px;
+    .card {
+      width: 400px;
+      height: 200px;
+      background-color: red;
+    }
+  }
+}
+
 // styled by m
 
 footer {
