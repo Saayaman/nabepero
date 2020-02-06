@@ -441,6 +441,13 @@ nav {
           background-color: #d93932;
         }
       }
+
+      .subcol {
+        button {
+          display: flex;
+          flex-shrink: 2;
+        }
+      }
     }
 
     .column4 {

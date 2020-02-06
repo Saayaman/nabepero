@@ -25,10 +25,12 @@ export const Companies = () => {
             <Flag />
             <button>Microsoft</button>
           </div>
+
           <div className="subcol subcol2">
             <p></p>
             <button>Amazon</button>
           </div>
+
           <div className="subcol subcol3">
             <Flag />
             <button>FC2</button>
