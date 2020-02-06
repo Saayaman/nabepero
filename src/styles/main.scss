@@ -514,11 +514,29 @@ nav {
   flex-flow: column wrap;
   align-items: center;
 
+  h3 {
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 47px;
+    color: #2d8fd7;
+  }
+
+  p {
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 20px;
+    text-align: center;
+    color: #000000;
+  }
+
   .slider {
-    width: 600px;
+    width: 80%;
+    display: flex;
+    flex-flow: row wrap;
     .card {
-      width: 400px;
-      height: 200px;
+      width: 300px;
+      height: 150px;
+      margin: 10px;
       background-color: red;
     }
   }
