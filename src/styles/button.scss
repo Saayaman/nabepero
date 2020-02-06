@@ -1,0 +1,32 @@
+@import "./colors";
+
+.Button {
+  width: 385px;
+  height: 80px;
+  outline: none;
+  color: #ffffff;
+  font-size: 26px;
+  border-radius: 40px;
+  border: none;
+  background-color: $orange;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.2s ease-in;
+
+  &:hover {
+    background-color: white;
+    color: $orange;
+    border: 2px solid $orange;
+
+    svg path {
+      stroke: $orange;
+    }
+  }
+
+  svg {
+    position: absolute;
+    right: 24px;
+  }
+}

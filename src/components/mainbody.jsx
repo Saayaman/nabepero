@@ -1,6 +1,6 @@
 import React from "react";
 import { Quote } from "./quote";
-import { ReactComponent as Arrow } from "../assets/images/Arrow.svg";
+import { ReactComponent as Arrow } from "../assets/images/icon-arrow.svg";
 import { ReactComponent as Payment } from "../assets/images/clip-payment.svg";
 import { ReactComponent as Waiting } from "../assets/images/clip-waiting.svg";
 
