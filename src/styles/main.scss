@@ -540,6 +540,17 @@ nav {
       background-color: red;
     }
   }
+
+  button {
+    width: 180px;
+    padding: 10px 15px;
+    border-radius: 20px;
+    text-align: center;
+    outline: none;
+    cursor: pointer;
+    border-color: transparent;
+    background-color: $orange;
+  }
 }
 
 // styled by m
