@@ -174,33 +174,24 @@ nav {
 }
 
 .about {
-  margin: 0;
-  padding: 0;
-  width: 100%;
+  position: relative;
 
-  .container {
-    position: relative;
     .about-bg {
-      width: 500px;
-      height: 400px;
       position: absolute;
-      top: -54px;
-      left: -95px;
-      background-size: 400px;
-      background-repeat: no-repeat;
-      background-image: url("../assets/images/about.png");
+      top: -60px;
+      left: 40px;
       background-position: top;
-      @include below-desktop() {
-        top: 66px;
-        left: 7px;
-      }
+      color: #EFEFEF;
+      z-index: -1;
+      font-style: normal;
+      font-weight: 800;
+      font-size: 70px !important;
+      line-height: 113.7%;
+      margin: 0;
     }
-    @include below-desktop() {
-      padding: 50px;
-    }
-  }
+
   p {
-    color: #267ebe;
+    color: $dark-blue;
     margin: 100px auto 100px auto;
   }
 }
