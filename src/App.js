@@ -4,6 +4,7 @@ import {
   Header,
   Footer,
   About,
+  Summary,
   Slider,
   MainBody,
   Companies,
@@ -21,6 +22,7 @@ function App() {
       <Companies />
       <BioGraphi />
       <Slider />
+      <Summary />
       <ContactForm />
       <Footer />
     </div>
