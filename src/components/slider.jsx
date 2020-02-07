@@ -56,6 +56,18 @@ const testimonialsData = [
     name: "鈴木めぐみ",
     position: "株式会社スズキ　代表取締役CEO",
     comment: "「対応が丁寧で的確でした。今後もお願いしようと思います」",
+  },
+  {
+    image: avatar1,
+    name: "鈴木めぐみ",
+    position: "株式会社スズキ　代表取締役CEO",
+    comment: "「対応が丁寧で的確でした。今後もお願いしようと思います」",
+  },
+  {
+    image: avatar1,
+    name: "鈴木めぐみ",
+    position: "株式会社スズキ　代表取締役CEO",
+    comment: "「対応が丁寧で的確でした。今後もお願いしようと思います」",
   }
 ]
 
@@ -72,13 +84,17 @@ export class Slider extends React.Component {
     return testimonialsData.map(({ image, name, position, comment}, i) => 
       <div className="Slider-item">
         <div className="testimonial-title">
-          <div className="Slider-item-imageWrapper"><img src={image} /></div>
-          <div>
+          <div className="Slider-item-borderline" />
+          <div className="Slider-item-imageWrapper">
+            <div className="Slider-item-number">{`0${i+1}`}</div>
+            <img src={image} alt="avatar photo" />
+          </div>
+          <div className="Slider-item-nameWrapper">
             <h4>{name}</h4>
-            <p>{position}</p>
+            <text>{position}</text>
           </div>
         </div>
-        <p>{comment}</p>
+        <p className="Slider-item-comment">{comment}</p>
       </div>
     )
   }
@@ -110,7 +126,6 @@ export class Slider extends React.Component {
     return (
       <div id="testimonial" className="testimonial">
         <h3>お客様の声</h3>
-        <p>たくさんの方々に反響を頂いております。</p>
         <div>
           <AliceCarousel
             items={galleryItems}
@@ -119,13 +134,6 @@ export class Slider extends React.Component {
             onInitialized={this.handleOnSlideChange}
             onSlideChanged={this.handleOnSlideChange}
             onResized={this.handleOnSlideChange}
-          />
-          {/* <button onClick={this.slidePrevPage}>Prev Page</button>
-          <button onClick={this.slideNextPage}>Next Page</button> */}
-        </div>
-        <div style={{ display: "flex", justifyContent: "center" }}>
-          <Button
-            text="今すぐ無料相談！"
           />
         </div>
       </div>
