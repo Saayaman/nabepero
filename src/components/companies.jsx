@@ -6,73 +6,112 @@ import { ReactComponent as Philippines } from "assets/images/philippines.svg";
 import { Quote } from "./quote";
 import Container from "./container";
 
+const CompanyListSection = ({ title, flag, lists}) => (
+  <div className="CompanyListSection">
+    <div className="Company-title">{flag}{title}</div>
+    <div className="CompanyLists">
+      {lists.map((list) => (
+        <div style={{ backgroundColor: list.color}} className="CompanyLists-list">
+          {list.text}
+        </div>
+      ))}
+    </div>
+  </div>
+)
+
 export const Companies = () => {
   return (
     <Container size="sm">
       <div id="companies" className="companies">
         <Quote className="blue orangequote" text="取り扱い海外法人の登記簿一覧" />
-        <div className="col column1">
-          <Flag />
-          <p>カリフォルニア州</p>
-        </div>
+          <div className="companies-wrapper">
 
-        <div className="col column2">
-          <button>Google LLC</button>
-          <button>Facebook Inc</button>
-          <button>Twitter Inc</button>
-          <button>YouTube LLC</button>
-        </div>
+          <CompanyListSection
+            title="カリフォルニア州"
+            flag={<Flag />}
+            lists={[
+              {
+                text: "Google LLC",
+                color: "#3b7ded"
+              },
+              {
+                text: "Facebook Inc",
+                color: "#4868ad",
+              },
+              {
+                text: "Twitter Inc",
+                color: "#48a1ec",
+              },
+              {
+                text: "YouTubbe LLC",
+                color: "#ff0000",
+              }
+            ]}
+          />
 
-        <div className="col column3">
-          <div className="subcol subcol1">
-            <Flag />
-            <button>Microsoft</button>
+          <CompanyListSection
+            title="ワシントン州"
+            flag={<Flag />}
+            lists={[
+              {
+                text: "Microsoft",
+                color: "#47A6EA",
+              }, {
+                text: "Amazon",
+                color: "#EF9B39",
+              }
+            ]}
+          />
+
+          <CompanyListSection
+            title="ネバダ州"
+            flag={<Flag />}
+            lists={[
+              {
+                text: "FC2",
+                color: "#D93932",
+              }
+            ]}
+          />
+
+          <CompanyListSection
+            title="フィリピン"
+            flag={<Philippines />}
+            lists={[
+              {
+                text: "Loki Technology, Inc (5ch.net)",
+                color: "#FF893B",
+              }
+            ]}
+          />
+
+          <CompanyListSection
+            title="シンガポール"
+            flag={<Singapore />}
+            lists={[
+              {
+                text: "パケットモンスター（２ちゃんねる",
+                color: "#000000",
+              }
+            ]}
+          />
+
+          <CompanyListSection
+            title="アイルランド"
+            flag={<Ireland />}
+            lists={[
+              {
+                text: "Twitter International Company",
+                color: "#48a1ec",
+              },
+              {
+                text: "Facebook Ireland limited",
+                color: "#4868ad",
+              }
+            ]}
+          />
           </div>
-          <div className="subcol subcol2">
-            <p></p>
-            <button>Amazon</button>
-          </div>
-          <div className="subcol subcol3">
-            <Flag />
-            <button>FC2</button>
-          </div>
-        </div>
-
-        <div className="col column4">
-          <div className="subcol subcol1">
-            <div>
-              <Philippines />
-              <p>フィリピン</p>
-            </div>
-
-            <button>Loki Technology, Inc (5ch.net)</button>
-          </div>
-
-          <div className="subcol subcol2">
-            <div>
-              <Singapore />
-              <p>シンガポール</p>
-            </div>
-
-            <button>パケットモンスター（２ちゃんねる）</button>
-          </div>
-        </div>
-
-        <div className="col column5">
-          <div className="subcol subcol1">
-            <div>
-              <Ireland />
-              <p>フィリピン</p>
-            </div>
-
-            <button>Twitter International</button>
-          </div>
-
-          <div className="subcol subcol2">
-            <h1></h1>
-            <button>Facebook Ireland limited</button>
-          </div>
-        </div>
+       
       </div>
     </Container>
   );

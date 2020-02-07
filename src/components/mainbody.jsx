@@ -69,9 +69,14 @@ export const MainBody = props => (
       </div> */}
 
       <div className="images">
-        <img src={require("../assets/images/image3.png")} />
+
+        {/* <img src={require("../assets/images/image3.png")} />
         <img src={require("../assets/images/image2.png")} />
-        <img src={require("../assets/images/image1.png")} />
+        <img src={require("../assets/images/image1.png")} /> */}
+        
+         <div className="image-wrapper"><img src={require("../assets/images/image3.png")} /></div>
+         <div className="image-wrapper"><img src={require("../assets/images/image2.png")} /></div>
+         <div className="image-wrapper"><img src={require("../assets/images/image1.png")} /></div>
       </div>
 
     </Container>
