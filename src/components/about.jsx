@@ -1,11 +1,12 @@
 import React from "react";
 import { ReactComponent as Budge } from "assets/images/budge.svg";
+import Container from "./container";
 
 export const About = () => {
   return (
-    <section id="about" className="about ">
-      <div className="container">
-        <div className="about-bg"></div>
+    <section id="about" className="about">
+      <Container size="sm">
+        <h1 className="about-bg">ABOUT<br/>NABEPURO</h1>
         <p>
           近年インターネット上ではSNSが急速に普及し、
           <br />
@@ -17,14 +18,14 @@ export const About = () => {
           <br />
           その際に海外法人の登記簿が必要となりますが、
           <br />
-          その取得は多くの弁護士にとってかなり面倒な作業です。>
+          その取得は多くの弁護士にとってかなり面倒な作業です
           <br />
           場合によっては一定の条件を満たさなければ取得できないこともあります。
           <br />
           <br />
           我々はそのような面倒な作業を代行し、裁判に必要な書類を低価格で提供しております！
         </p>
-      </div>
+      </Container>
     </section>
   );
 };

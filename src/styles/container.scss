@@ -1,0 +1,13 @@
+.Container {
+  margin: 0 auto;
+  padding-left: 40px;
+  padding-right: 40px;
+
+  &-lg {
+    max-width: 1440px;
+  }
+
+  &-sm {
+    max-width: 900px;
+  }
+}
