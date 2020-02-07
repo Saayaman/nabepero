@@ -36,6 +36,29 @@ import AliceCarousel from 'react-alice-carousel'
 import 'react-alice-carousel/lib/alice-carousel.css'
 import Button from './button'
 
+import avatar1 from "../assets/images/avatar1.png";
+
+const testimonialsData = [
+  {
+    image: avatar1,
+    name: "鈴木めぐみ",
+    position: "株式会社スズキ　代表取締役CEO",
+    comment: "「対応が丁寧で的確でした。今後もお願いしようと思います」",
+  },
+  {
+    image: avatar1,
+    name: "鈴木めぐみ",
+    position: "株式会社スズキ　代表取締役CEO",
+    comment: "「対応が丁寧で的確でした。今後もお願いしようと思います」",
+  },
+  {
+    image: avatar1,
+    name: "鈴木めぐみ",
+    position: "株式会社スズキ　代表取締役CEO",
+    comment: "「対応が丁寧で的確でした。今後もお願いしようと思います」",
+  }
+]
+
 
 export class Slider extends React.Component {
   state = {
@@ -46,9 +69,18 @@ export class Slider extends React.Component {
   }
 
   galleryItems() {
-    return Array(7)
-      .fill()
-      .map((item, i) => <div className="Slider-item">{i + 1}</div>)
+    return testimonialsData.map(({ image, name, position, comment}, i) => 
+      <div className="Slider-item">
+        <div className="testimonial-title">
+          <div className="Slider-item-imageWrapper"><img src={image} /></div>
+          <div>
+            <h4>{name}</h4>
+            <p>{position}</p>
+          </div>
+        </div>
+        <p>{comment}</p>
+      </div>
+    )
   }
 
   slidePrevPage = () => {
