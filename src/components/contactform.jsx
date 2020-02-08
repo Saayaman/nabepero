@@ -1,11 +1,12 @@
 import React from "react";
 import Container from "./container";
+import Button from "./button";
 
 export const ContactForm = () => {
   return (
     <div id="contacts" className="contactform">
 
-      <Container size="sm">
+      {/* <Container size="sm">
         <h3 className="title">お問い合わせ</h3>
 
         <div className="description">
@@ -17,14 +18,18 @@ export const ContactForm = () => {
         <div className="mainform">
           <div className="input-row">
             <p className="label">お名前</p>
-            <input type="text" placeholder="山田" />
-            <input type="text" placeholder="太郎" />
+            <div className="input-row-two">
+              <input type="text" placeholder="山田" />
+              <input type="text" placeholder="太郎" />
+            </div>
           </div>
 
           <div className="input-row">
             <p className="label">フリガナ</p>
-            <input type="text" placeholder="ヤマダ" />
-            <input type="text" placeholder="タロウ" />
+            <div className="input-row-two">
+              <input type="text" placeholder="ヤマダ" />
+              <input type="text" placeholder="タロウ" />
+            </div>
           </div>
 
           <div className="input-row">
@@ -39,10 +44,10 @@ export const ContactForm = () => {
 
           <div className="input-row button">
             <p className="label"></p>
-            <button>送信する</button>
+            <Button text="送信する" size="sm" />
           </div>
         </div>
-      </Container>
+      </Container> */}
     </div>
   );
 };

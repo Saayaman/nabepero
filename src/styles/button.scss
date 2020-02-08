@@ -29,4 +29,11 @@
     position: absolute;
     right: 24px;
   }
+
+  &-sm {
+    height: 54px;
+    max-width: 260px;
+    font-size: 20px;
+    svg { display: none;}
+  }
 }
