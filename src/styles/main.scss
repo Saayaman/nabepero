@@ -622,56 +622,67 @@ footer {
     align-self: center;
     flex-flow: column wrap;
     border: #DADADA solid 1px;
-    @include desktop-wide() {
-      background: green;
-    }
 
     @include phone-wide() {
       flex-direction: column;
+      padding: 20px;
     }
 
     .input-row {
       margin: 10px;
       display: flex;
-      // justify-content: space-between;
       align-items: center;
       font-size: 16px;
 
-      &-two {
-        display: flex;
-      }
-
-
-      @include desktop-wide() {
+      @include tablet() {
         flex-direction: column;
+        margin: 0;
+        margin-top: 20px;
+        align-items: left;
       }
       
       .label {
         width: 180px;
         margin: unset;
-        margin-top: 10px;
+        @include tablet() {
+          width: 100%;
+        }
       }
 
       input {
+        width: -webkit-fill-available;
         height: 30px;
         display: flex;
         flex-grow: 1;
-        margin: 0 10px;
         padding: 8px 12px;
         font-size: 18px;
         border: #DADADA solid 1px;
-
       }
 
       textarea {
+        width: -webkit-fill-available;
         height: 140px;
         display: flex;
         flex-grow: 1;
-        margin: 0 10px;
         padding: 8px 12px;
         font-size: 18px;
         border: #DADADA solid 1px;
       }
+
+      .input-row-two {
+        display: flex;
+        width: 100%;
+
+        input:nth-child(2) { margin-left: 16px; }
+
+        @include tablet() {
+          input {
+            width: 50%;
+          }
+        }
+        
+      }
+
     }
   }
 }
