@@ -14,7 +14,7 @@ import Container from "./container";
 export const MainBody = props => (
   <div id="mainBody" className="mainbody">
     <Container size="sm">
-      <h3 className="mainbody__title">nabeperoの強み</h3>
+      <h2 className="mainbody__title">nabeperoの強み</h2>
 
       <div className="twocard">
         <div>

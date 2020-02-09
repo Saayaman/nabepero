@@ -6,8 +6,11 @@ import {
   useWindowScroll,
   useThrottledFn
 } from "beautiful-react-hooks";
+import Container from "./container";
+import Button from "./button";
+
 export const Header = () => {
-  const isSmall = useMediaQuery("(max-width: 1247px)");
+  const isSmall = useMediaQuery("(max-width: 1024px)");
   const [showSidebar, setShowSidebar] = useState(false);
   const [showMenu, setShowMenu] = useState(false);
   const [scrollY, setScrollY] = useState(window.scrollY);
@@ -32,7 +35,8 @@ export const Header = () => {
   return (
     <>
       <nav>
-        <div className="navbar container">
+        <Container size="lg">
+          <div className="navbar container">
           <Logo className="logo" />
           <ul className="top-nav">
             <li
@@ -69,12 +73,11 @@ export const Header = () => {
               className={`${scrollY < 4900 && scrollY > 4000 ? "active" : ""}`}
               onClick={() => scrollTo("testimonial")}
             >
-              <button
-                onClick={() => scrollTo("contacts")}
-                className="round-orange"
-              >
-                お問い合わせ
-              </button>
+              <Button
+                size="sm"
+                text="お問い合わせ"
+                handleClick={() => scrollTo("contacts")}
+              />
             </li>
           </ul>
           {isSmall && (
@@ -89,6 +92,7 @@ export const Header = () => {
             />
           )}
         </div>
+        </Container>
       </nav>
       <div className={`slide-bar ${showSidebar ? "show" : "hide"}`}>
         <MdClose
@@ -106,12 +110,7 @@ export const Header = () => {
             <li onClick={() => scrollTo("companies", true)}>利用者の声</li>
             <li onClick={() => scrollTo("bio", true)}>会社概要</li>
             <li onClick={() => scrollTo("testimonial", true)}>
-              <button
-                onClick={() => scrollTo("contacts", true)}
-                className="round-orange"
-              >
-                お問い合わせ
-              </button>
+              <Button handleClick={() => scrollTo("contacts", true)} size="sm" text={"お問い合わせ"} />
             </li>
           </ul>
         </div>
