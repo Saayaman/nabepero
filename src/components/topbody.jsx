@@ -5,11 +5,13 @@ import Container from "./container";
 
 export const TopBody = () => {
   return (
+    <>
+    <div className="hero-bg-color" />
     <section id="header" className="topbody">
 
         <div className="container">
         {/* <Container> */}
-
+          <div className="hero-bg-color" />
           <div className="hero-left">
             <h1>海外登記簿の取得、<br />お困りですか？</h1>
 
@@ -29,5 +31,6 @@ export const TopBody = () => {
         </div>
 
     </section>
+    </>
   );
 };
