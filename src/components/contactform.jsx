@@ -7,7 +7,7 @@ export const ContactForm = () => {
     <div id="contacts" className="contactform">
  
         <Container size="sm">
-         <h3 className="title">お問い合わせ</h3>
+         <h2 className="title">お問い合わせ</h2>
 
          <div className="description">
            <p>ご質問は下記のフォーム、もしくは</p>

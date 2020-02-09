@@ -86,7 +86,7 @@ export class Slider extends React.Component {
 
     return (
       <div id="testimonial" className="testimonial">
-        <h3>お客様の声</h3>
+        <h2>お客様の声</h2>
         <div>
           <AliceCarousel
             items={galleryItems}

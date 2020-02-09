@@ -10,7 +10,7 @@ export const Summary = () => {
   return (
     <Container size="sm">
       <div className="summary">
-        <h3>会社概要</h3>
+        <h2>会社概要</h2>
         <div className="row">
           <h4>社名</h4>
           <p>株式会社nabepero</p>
