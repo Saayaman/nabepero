@@ -163,12 +163,29 @@ p {
       max-width: 900px;
       width: 900px;
       margin: 0 auto;
+
+      
       h1 {
         font-style: normal;
         font-weight: 800;
-        font-size: 70px !important;
+        font-size: 70px;
         line-height: 113.7%;
         margin: 0;
+
+        @include phone-wide() {
+          font-size: 66px;
+        }
+      }
+
+      p {
+        margin-top: 20px;
+        margin-bottom: 40px;
+      }
+
+      @include phone-small() {
+        h1 {
+          font-size: 36px;
+        }
       }
     }
 
@@ -197,9 +214,13 @@ p {
       z-index: -1;
       font-style: normal;
       font-weight: 800;
-      font-size: 70px !important;
+      font-size: 70px;
       line-height: 113.7%;
       margin: 0;
+
+      @include phablet() {
+        font-size: 40px;
+      }
     }
 
   p {
@@ -231,7 +252,10 @@ p {
       flex-direction: column;
       justify-content: center;
 
-      &:last-child { margin-top: 40px; }
+      &:last-child {
+        margin-top: 60px;
+        margin-bottom: 40px;
+      }
 
       p {
         color: #2d8fd7;
@@ -355,7 +379,7 @@ p {
 .alice-carousel__next-btn {
   position: absolute;
   bottom: -24px;
-  right: calc(50% - 160px);
+  right: calc(50% - 140px);
 }
 
 
