@@ -62,7 +62,7 @@ p {
   }
 
   .close-icon {
-    font-size: 25px;
+    font-size: 30px;
     margin: 25px;
     color: black;
   }
@@ -71,6 +71,7 @@ p {
     li {
       font-weight: normal;
       transition: all ease-in 300ms;
+      margin-bottom: 16px;
     }
     li:hover {
       font-weight: bold;
@@ -93,16 +94,9 @@ p {
   align-items: center;
   height: 80px;
 
-  @include below-desktop() {
-    padding: 0 20px;
-  }
-  @include desktop-wide() {
-    padding: 0 20px;
-  }
-
   ul {
     &.top-nav {
-      @include below-desktop() {
+      @include tablet-wide() {
         display: none;
       }
     }
@@ -116,11 +110,19 @@ p {
       cursor: pointer;
       list-style-type: none;
 
+      &:hover {
+        color: $orange;
+        transition: 0.2s ease;
+      }
+
+      @include desktop-wide() {
+        padding: 0 10px;
+      }
+
       button {
         outline: none;
         cursor: pointer;
         padding: 10px 34px;
-        margin-top: 10px;
         border-radius: 50px;
         background: $orange;
         border-color: transparent;
@@ -550,8 +552,10 @@ footer {
       a {
         color: $dark-blue;
         text-decoration: none;
-        font-style: normal;
-        font-weight: bold;
+
+        &:hover {
+          text-decoration: none;
+        }
       }
     }
   }
@@ -638,7 +642,7 @@ footer {
       }
 
 
-      @include tablet-wide() {
+      @include desktop-wide() {
         flex-direction: column;
       }
       
