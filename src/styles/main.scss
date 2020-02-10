@@ -187,21 +187,21 @@ p {
         font-size: 70px;
         line-height: 113.7%;
         margin: 0;
-
-        @include phone-wide() {
+        @include tablet() {
           font-size: 66px;
         }
+        @include phablet() {
+          font-size: 36px;
+        }
+
+        // @include phone-small() {
+        //     font-size: 36px;
+        // }
       }
 
       p {
         margin-top: 20px;
         margin-bottom: 40px;
-      }
-
-      @include phone-small() {
-        h1 {
-          font-size: 36px;
-        }
       }
     }
 
@@ -214,6 +214,21 @@ p {
       align-items: center;
       flex-direction: column;
       justify-content: space-around;
+      @include phablet() {
+        position: absolute;
+        bottom: 40px;
+        width: 100vw;
+        flex: 1 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+      }
+      svg {
+        @include phablet() {
+          width: 154px;
+        }
+      }
     }
   }
 }
