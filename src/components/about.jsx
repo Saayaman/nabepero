@@ -1,12 +1,15 @@
 import React from "react";
-import { ReactComponent as Budge } from "assets/images/budge.svg";
 import Container from "./container";
 
 export const About = () => {
   return (
     <section id="about" className="about">
       <Container size="sm">
-        <h1 className="about-bg">ABOUT<br/>NABEPURO</h1>
+        <h1 className="about-bg">
+          ABOUT
+          <br />
+          NABEPURO
+        </h1>
         <p>
           近年インターネット上ではSNSが急速に普及し、
           <br />

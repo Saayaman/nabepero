@@ -21,7 +21,7 @@ nav {
   position: fixed;
   background: white;
   z-index: 100;
-  box-shadow: 0 2px 8px 0 rgba(0,0,0,.1);
+  box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.1);
   z-index: 1000;
 }
 
@@ -95,6 +95,9 @@ p {
   justify-content: space-between;
   align-items: center;
   height: 80px;
+  .logo {
+    cursor: pointer;
+  }
 
   ul {
     &.top-nav {
@@ -178,7 +181,6 @@ p {
       margin: 0 auto;
       z-index: 100;
 
-      
       h1 {
         font-style: normal;
         font-weight: 800;
@@ -219,23 +221,23 @@ p {
 .about {
   position: relative;
 
-    .about-bg {
-      position: absolute;
-      top: -60px;
-      left: 40px;
-      background-position: top;
-      color: #EFEFEF;
-      z-index: -1;
-      font-style: normal;
-      font-weight: 800;
-      font-size: 70px;
-      line-height: 113.7%;
-      margin: 0;
+  .about-bg {
+    position: absolute;
+    top: -60px;
+    left: 40px;
+    background-position: top;
+    color: #efefef;
+    z-index: -1;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 70px;
+    line-height: 113.7%;
+    margin: 0;
 
-      @include phablet() {
-        font-size: 40px;
-      }
+    @include phablet() {
+      font-size: 40px;
     }
+  }
 
   p {
     color: $dark-blue;
@@ -282,7 +284,9 @@ p {
         flex-direction: row;
         align-items: center;
         margin-bottom: 16px;
-        h3 { margin-left: 16px; }
+        h3 {
+          margin-left: 16px;
+        }
       }
     }
   }
@@ -336,12 +340,14 @@ p {
     margin-bottom: 24px;
     margin-top: 40px;
 
-    svg { margin-right: 8px; }
+    svg {
+      margin-right: 8px;
+    }
   }
 
   .CompanyLists {
     display: flex;
-    flex-wrap: wrap
+    flex-wrap: wrap;
   }
 
   .CompanyLists-list {
@@ -349,7 +355,7 @@ p {
     color: white;
     padding: 16px 24px;
     margin-right: 24px;
-    margin-top:12px;
+    margin-top: 12px;
   }
 }
 
@@ -364,22 +370,23 @@ p {
   }
 }
 
-.alice-carousel__prev-btn, .alice-carousel__next-btn {
-    background: $dark-blue;
+.alice-carousel__prev-btn,
+.alice-carousel__next-btn {
+  background: $dark-blue;
+  display: flex;
+  justify-content: center;
+  border-radius: 50px;
+  width: 78px;
+  height: 78px;
+
+  &-wrapper {
     display: flex;
-    justify-content: center;
-    border-radius: 50px;
-    width: 78px;
-    height: 78px;
+    align-items: center;
+  }
 
-    &-wrapper {
-      display: flex;
-      align-items: center;
-    }
-
-    &-item {
-      color: white !important;
-    }
+  &-item {
+    color: white !important;
+  }
 }
 
 .alice-carousel__prev-btn {
@@ -393,7 +400,6 @@ p {
   bottom: -24px;
   right: calc(50% - 140px);
 }
-
 
 .testimonial {
   width: 100%;
@@ -432,7 +438,7 @@ p {
     }
 
     &-number {
-      font-family: 'Racing Sans One', cursive;
+      font-family: "Racing Sans One", cursive;
       color: $dark-blue;
       position: absolute;
       top: -20px;
@@ -448,10 +454,10 @@ p {
 
     &-nameWrapper {
       margin-left: 16px;
-      h4 { 
+      h4 {
         margin-bottom: 16px;
       }
-      text {
+      span {
         font-size: 16px;
         color: $dark-blue;
       }
@@ -476,7 +482,7 @@ p {
 
   .row {
     width: 100%;
-    border-top: 1px solid #DADADA;
+    border-top: 1px solid #dadada;
     padding-top: 8px;
     padding-bottom: 8px;
 
@@ -505,7 +511,6 @@ p {
 }
 
 .BioGraphi {
-
   h2 {
     text-align: center;
     margin-bottom: 40px;
@@ -559,7 +564,9 @@ p {
 
   .BioGraphi-section-text {
     margin-top: 40px;
-    p { font-size: 16px; }
+    p {
+      font-size: 16px;
+    }
     span {
       color: $dark-blue;
       margin-right: 16px;
@@ -567,12 +574,15 @@ p {
       width: 100px;
     }
     &:nth-child(2) {
-      p { margin-bottom: 16px; }
-      span { display: block; }
+      p {
+        margin-bottom: 16px;
+      }
+      span {
+        display: block;
+      }
     }
   }
 }
-
 
 // footer ============================>
 
@@ -637,7 +647,6 @@ footer {
   }
 }
 
-
 .contactform {
   margin-top: 80px;
   padding-bottom: 60px;
@@ -687,7 +696,7 @@ footer {
         margin-top: 20px;
         align-items: left;
       }
-      
+
       .label {
         width: 180px;
         margin: unset;
@@ -703,7 +712,7 @@ footer {
         flex-grow: 1;
         padding: 8px 12px;
         font-size: 18px;
-        border: #DADADA solid 1px;
+        border: #dadada solid 1px;
       }
 
       textarea {
@@ -713,23 +722,23 @@ footer {
         flex-grow: 1;
         padding: 8px 12px;
         font-size: 18px;
-        border: #DADADA solid 1px;
+        border: #dadada solid 1px;
       }
 
       .input-row-two {
         display: flex;
         width: 100%;
 
-        input:nth-child(2) { margin-left: 16px; }
+        input:nth-child(2) {
+          margin-left: 16px;
+        }
 
         @include tablet() {
           input {
             width: 50%;
           }
         }
-        
       }
-
     }
   }
 }

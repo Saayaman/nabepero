@@ -6,26 +6,35 @@ import { ReactComponent as Philippines } from "assets/images/philippines.svg";
 import { Quote } from "./quote";
 import Container from "./container";
 
-const CompanyListSection = ({ title, flag, lists}) => (
+const CompanyListSection = ({ title, flag, lists }) => (
   <div className="CompanyListSection">
-    <div className="Company-title">{flag}{title}</div>
+    <div className="Company-title">
+      {flag}
+      {title}
+    </div>
     <div className="CompanyLists">
-      {lists.map((list) => (
-        <div style={{ backgroundColor: list.color}} className="CompanyLists-list">
+      {lists.map((list, i) => (
+        <div
+          key={i * Math.random()}
+          style={{ backgroundColor: list.color }}
+          className="CompanyLists-list"
+        >
           {list.text}
         </div>
       ))}
     </div>
   </div>
-)
+);
 
 export const Companies = () => {
   return (
     <Container size="sm">
       <div id="companies" className="companies">
-        <Quote className="blue orangequote" text="取り扱い海外法人の登記簿一覧" />
-          <div className="companies-wrapper">
-
+        <Quote
+          className="blue orangequote"
+          text="取り扱い海外法人の登記簿一覧"
+        />
+        <div className="companies-wrapper">
           <CompanyListSection
             title="カリフォルニア州"
             flag={<Flag />}
@@ -36,15 +45,15 @@ export const Companies = () => {
               },
               {
                 text: "Facebook Inc",
-                color: "#4868ad",
+                color: "#4868ad"
               },
               {
                 text: "Twitter Inc",
-                color: "#48a1ec",
+                color: "#48a1ec"
               },
               {
                 text: "YouTubbe LLC",
-                color: "#ff0000",
+                color: "#ff0000"
               }
             ]}
           />
@@ -55,10 +64,11 @@ export const Companies = () => {
             lists={[
               {
                 text: "Microsoft",
-                color: "#47A6EA",
-              }, {
+                color: "#47A6EA"
+              },
+              {
                 text: "Amazon",
-                color: "#EF9B39",
+                color: "#EF9B39"
               }
             ]}
           />
@@ -69,7 +79,7 @@ export const Companies = () => {
             lists={[
               {
                 text: "FC2",
-                color: "#D93932",
+                color: "#D93932"
               }
             ]}
           />
@@ -80,7 +90,7 @@ export const Companies = () => {
             lists={[
               {
                 text: "Loki Technology, Inc (5ch.net)",
-                color: "#FF893B",
+                color: "#FF893B"
               }
             ]}
           />
@@ -91,7 +101,7 @@ export const Companies = () => {
             lists={[
               {
                 text: "パケットモンスター（２ちゃんねる",
-                color: "#000000",
+                color: "#000000"
               }
             ]}
           />
@@ -102,16 +112,15 @@ export const Companies = () => {
             lists={[
               {
                 text: "Twitter International Company",
-                color: "#48a1ec",
+                color: "#48a1ec"
               },
               {
                 text: "Facebook Ireland limited",
-                color: "#4868ad",
+                color: "#4868ad"
               }
             ]}
           />
-          </div>
-       
+        </div>
       </div>
     </Container>
   );

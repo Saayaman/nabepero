@@ -1,15 +1,10 @@
 import React from "react";
 import Container from "./container";
 
-const responsive = {
-  0: { items: 1 },
-  1024: { items: 2 }
-};
-
 export const Summary = () => {
   return (
     <Container size="sm">
-      <div className="summary">
+      <div id="summary" className="summary">
         <h2>会社概要</h2>
         <div className="row">
           <h4>社名</h4>
@@ -23,9 +18,16 @@ export const Summary = () => {
 
         <div className="row">
           <h4>所在地</h4>
-          <p>東京都世田谷3-23-3
-            <a href="https://www.google.com/maps/place/3-ch%C5%8Dme-23-3+Setagaya,+Setagaya+City,+T%C5%8Dky%C5%8D-to+154-0017,+Japan/@35.6456045,139.6460073,16z/data=!4m5!3m4!1s0x6018f3789d950475:0xe556fc3ba3fc9dfd!8m2!3d35.6456045!4d139.6503847"
-              style={{ color: '#F19437', marginLeft: '10px', fontWeight: 'normal'}}
+          <p>
+            東京都世田谷3-23-3
+            <a
+              href="https://www.google.com/maps/place/3-ch%C5%8Dme-23-3+Setagaya,+Setagaya+City,+T%C5%8Dky%C5%8D-to+154-0017,+Japan/@35.6456045,139.6460073,16z/data=!4m5!3m4!1s0x6018f3789d950475:0xe556fc3ba3fc9dfd!8m2!3d35.6456045!4d139.6503847"
+              style={{
+                color: "#F19437",
+                marginLeft: "10px",
+                fontWeight: "normal"
+              }}
+              // eslint-disable-next-line react/jsx-no-target-blank
               target="_blank"
             >
               GOOGLE MAPSで住所を開く

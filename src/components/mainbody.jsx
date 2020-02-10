@@ -1,14 +1,10 @@
 import React from "react";
-import { Quote } from "./quote";
-import { ReactComponent as Arrow } from "../assets/images/icon-arrow.svg";
-// import { ReactComponent as Payment } from "../assets/images/clip-payment.svg";
-// import { ReactComponent as Waiting } from "../assets/images/clip-waiting.svg";
 import clipPayment from "../assets/images/clip-payment.svg";
 import clipWaiting from "../assets/images/clip-waiting.svg";
 
-import {ReactComponent as NumOne } from "../assets/images/1.svg";
-import {ReactComponent as NumTwo } from "../assets/images/2.svg";
-import {ReactComponent as NumThree } from "../assets/images/3.svg";
+import { ReactComponent as NumOne } from "../assets/images/1.svg";
+import { ReactComponent as NumTwo } from "../assets/images/2.svg";
+import { ReactComponent as NumThree } from "../assets/images/3.svg";
 import Container from "./container";
 
 export const MainBody = props => (
@@ -18,26 +14,26 @@ export const MainBody = props => (
 
       <div className="twocard">
         <div>
-          <img src={clipWaiting} alt="picture waiting" />
+          <img src={clipWaiting} alt="waiting" />
           <div className="cardtitle">
             <NumOne />
             <h3 className="mainbody__subtitle">スピーディーな対応</h3>
           </div>
           <p>
-            主要な海外法人の登記簿であれば、 <br />在庫を保有してます。
-            迅速なお届けが可能です！
+            主要な海外法人の登記簿であれば、 <br />
+            在庫を保有してます。 迅速なお届けが可能です！
           </p>
         </div>
 
         <div>
-          <img src={clipPayment} alt="picture payment" />
+          <img src={clipPayment} alt="payment" />
           <div className="cardtitle">
             <NumTwo />
             <h3 className="mainbody__subtitle">安価で確実にお届け</h3>
           </div>
           <p>
-            海外法人の登記簿をどこよりも 安く取得いたします。 <br />他社の10%
-            off価格で提供中！
+            海外法人の登記簿をどこよりも 安く取得いたします。 <br />
+            他社の10% off価格で提供中！
           </p>
         </div>
         <div>
@@ -46,7 +42,8 @@ export const MainBody = props => (
             <h3 className="mainbody__subtitle">現地対応スタッフ</h3>
           </div>
           <p>
-          フィリピンに関連会社があるため、フィリピンに籍を置く Loki Technology（5ちゃんねるの運営会社）の登記簿を取得することができます！
+            フィリピンに関連会社があるため、フィリピンに籍を置く Loki
+            Technology（5ちゃんねるの運営会社）の登記簿を取得することができます！
           </p>
         </div>
       </div>
@@ -69,16 +66,20 @@ export const MainBody = props => (
       </div> */}
 
       <div className="images">
-
         {/* <img src={require("../assets/images/image3.png")} />
         <img src={require("../assets/images/image2.png")} />
         <img src={require("../assets/images/image1.png")} /> */}
-        
-         <div className="image-wrapper"><img src={require("../assets/images/image3.png")} /></div>
-         <div className="image-wrapper"><img src={require("../assets/images/image2.png")} /></div>
-         <div className="image-wrapper"><img src={require("../assets/images/image1.png")} /></div>
-      </div>
 
+        <div className="image-wrapper">
+          <img src={require("../assets/images/image3.png")} alt="" />
+        </div>
+        <div className="image-wrapper">
+          <img src={require("../assets/images/image2.png")} alt="" />
+        </div>
+        <div className="image-wrapper">
+          <img src={require("../assets/images/image1.png")} alt="" />
+        </div>
+      </div>
     </Container>
   </div>
 );
