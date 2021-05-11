@@ -10,7 +10,7 @@
     "classnames": "^2.2.6",
     "husky": "^4.2.1",
     "lint-staged": "^10.0.7",
-    "lodash": "^4.17.15",
+    "lodash": "^4.17.21",
     "moment": "^2.24.0",
     "node-sass": "^4.13.1",
     "prettier": "^1.19.1",
